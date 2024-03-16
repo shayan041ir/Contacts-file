@@ -1,3 +1,4 @@
+//shayan rezayi
 #include <iostream>
 #include <fstream>
 #include <string>
@@ -8,7 +9,7 @@ struct contacts
     string l_name, f_name;
     int phone = 0;
 } tell;
-int menu()
+int menu()    //for select
 {
 
     int z;
@@ -29,7 +30,7 @@ int menu()
     cin >> z;
     return z;
 }
-void Search()
+void Search()    //for search
 {
     ifstream file("file.txt");
     string search;
@@ -52,7 +53,7 @@ void Search()
 
     system("pause");
 }
-void Insert()
+void Insert()    //for add
 {
     system("cls");
     ofstream cf("file.txt", ios::app);
@@ -72,8 +73,9 @@ void Insert()
     cf.close();
     system("pause");
 }
-void Delete()
+void Delete()    //for delete 
 {
+    //importent
     string name;
     cout << "enter the contact name for delete:";
     cin>>name;
@@ -102,7 +104,7 @@ void Delete()
     rename("file2.txt", "file.txt");
     system("pause");
 }
-void Display()
+void Display()    //for show
 {
     ifstream rf("file.txt");
     cout << left << setw(10) << "f_name" << setw(10) << "l_name" << setw(10) << "phone" << endl;
@@ -149,3 +151,4 @@ int main()
 
     return 0;
 }
+//sh041
